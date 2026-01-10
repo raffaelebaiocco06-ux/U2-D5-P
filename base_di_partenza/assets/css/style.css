@@ -149,6 +149,13 @@ footer {
   display: flex;
   justify-content: space-between;
 }
+/*mi serve un flex column*/
+.colonna {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
 .btn {
   background-color: white;
   color: #c1c1c1;
@@ -191,7 +198,26 @@ footer article div h2 {
   font-size: 1.5em;
   margin-bottom: 0.5em;
 }
-footer article div p,
-footer article div span {
-  color: #c1c1c1;
+footer article div p {
+  color: #919191;
+}
+span {
+  color: #919191;
+  background-color: #e4e3e3;
+  border-radius: 10px;
+  padding: 3px 7px;
+}
+.centra {
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.centra > img:last-child {
+  margin-left: auto;
+}
+
+.stella img:last-child {
+  margin-left: auto;
 }
