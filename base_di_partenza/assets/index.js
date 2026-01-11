@@ -15,3 +15,17 @@ window.addEventListener("scroll", () => {
     btn.classList.add("scrolled2");
   }
 });
+
+const M = document.querySelectorAll("svg path");
+function lampeggio() {
+  const tot = 15;
+  for (let i = 0; i < tot; i++) {
+    const conta = Math.floor(Math.random() * M.length);
+    const app = M[conta];
+    app.style.opacity = 1;
+    setTimeout(() => {
+      app.style.opacity = 0;
+    }, Math.random() * 1000);
+  }
+}
+setInterval(lampeggio, 1000);
