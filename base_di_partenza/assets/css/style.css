@@ -260,7 +260,7 @@ footer article {
   margin-top: 2em;
 }
 footer article div {
-  max-width: 36em;
+  max-width: 25em; /* lunghezza max*/
 }
 footer article div h2 {
   font-weight: bold;
@@ -365,11 +365,100 @@ span {
 
 /* Mobile */
 @media screen and (max-width: 480px) {
-  .M {
-    width: 100%;
-    top: 30px;
+  header nav {
+    padding-left: 1em;
+    padding-right: 1em;
   }
-  svg > * {
-    transform: scale(0.6);
+
+  header nav div {
+    margin-right: 5em;
+    gap: 0.5em;
+  }
+
+  nav ul .sparisco {
+    display: none;
+  }
+
+  header section {
+    flex-direction: column;
+    text-align: left;
+    padding-bottom: 3em;
+  }
+
+  .titolo {
+    margin-left: 1.5em;
+    margin-right: 1.5em;
+    margin-top: 6em;
+    min-width: unset;
+  }
+
+  h1 {
+    font-size: 4.5em;
+    line-height: 1;
+  }
+
+  .titolo p {
+    font-size: 1.5em;
+    margin-top: 1em;
+    br {
+      display: none;
+    }
+  }
+
+  svg,
+  .M {
+    display: none;
+  }
+
+  main {
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+  }
+
+  article {
+    gap: 2em;
+  }
+
+  .card {
+    max-width: 100%;
+    padding: 1em 0;
+  }
+
+  .contenuto {
+    margin-left: 0;
+    margin-top: 1em;
+  }
+
+  /* 5. Footer */
+  footer {
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+    margin-top: 3em;
+  }
+
+  .massimo,
+  .Flist {
+    max-width: 100%;
+  }
+
+  footer article div {
+    max-width: 100%;
+  }
+
+  .centra {
+    flex-direction: row;
+    align-items: center;
+    gap: 1em;
+  }
+
+  .centra > img:last-child {
+    display: block;
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    margin-left: auto;
+  }
+  footer article div {
+    max-width: 19em; /* lunghezza max*/
   }
 }
