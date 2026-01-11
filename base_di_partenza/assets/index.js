@@ -22,10 +22,11 @@ function lampeggio() {
   for (let i = 0; i < tot; i++) {
     const conta = Math.floor(Math.random() * M.length);
     const app = M[conta];
-    app.style.opacity = 1;
-    setTimeout(() => {
+    if (app.style.opacity == 1) {
       app.style.opacity = 0;
-    }, Math.random() * 1000);
+    } else {
+      app.style.opacity = 1;
+    }
   }
 }
-setInterval(lampeggio, 1000);
+setInterval(lampeggio, 400);
