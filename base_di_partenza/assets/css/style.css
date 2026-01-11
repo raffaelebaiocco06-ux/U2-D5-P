@@ -6,10 +6,24 @@ header {
   background-color: #ffc017;
   color: #191919;
   border-bottom: solid 2px black;
+  display: flex;
+  flex-direction: column;
+
+  padding-bottom: 0;
+  overflow: hidden;
 }
+
+header section {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  margin-bottom: 0;
+  overflow: hidden;
+}
+
 nav {
   background-color: #ffc017;
-  padding-left: 10em;
+  padding-left: 7em;
   padding-top: 1em;
   padding-bottom: 1em;
   display: flex;
@@ -73,6 +87,7 @@ button {
   font-size: 15px;
   padding: 10px;
 }
+
 @keyframes cambiocolore2 {
   from {
     background-color: #191919;
@@ -97,9 +112,10 @@ button.scrolled2 {
 }
 .titolo {
   margin-top: 3em;
-  margin-left: 10em;
+  margin-bottom: 3em;
+  margin-left: 7em;
   flex: 1 0 auto;
-  min-width: 500px;
+  min-width: 300px; /*500px*/
 }
 .titolo p {
   font-size: 2em;
@@ -118,21 +134,29 @@ h1 {
   margin-top: 0.5em;
   margin-bottom: 0.2em;
 }
-header section {
-  display: flex;
-  margin-bottom: 50px;
-  align-items: center;
-}
+
 svg > * {
-  transform: scale(1); /* Rimpicciolisce  */
+  transform: scale(1);
 }
 .M {
-  width: 800px;
-  position: relative;
-  top: 70px;
+  flex: 1.5;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  height: 100%;
+  min-height: 462px;
+}
+
+.M svg {
+  padding-top: 2em;
+  width: 100%;
+  height: auto;
+  min-width: 550px;
+  transform: scale(1.1);
+  transform-origin: right center;
 }
 main {
-  padding-left: 10em;
+  padding-left: 7em;
   border-bottom: solid 2px black;
 }
 h2 {
@@ -191,7 +215,7 @@ article {
 }
 footer {
   margin-top: 5em;
-  padding-left: 10em;
+  padding-left: 7em;
   display: flex;
   justify-content: space-between;
 }
@@ -225,7 +249,6 @@ footer section div ul li {
 }
 .massimo {
   max-width: 25em;
-
   margin-top: 0.5em;
 }
 .Flist {
@@ -262,8 +285,91 @@ span {
 
 .centra > img:last-child {
   margin-left: auto;
+  width: 12em;
+  height: auto;
 }
 
 .stella img:last-child {
   margin-left: auto;
+}
+/* Tablet */
+@media screen and (max-width: 1024px) {
+  header {
+    min-height: auto;
+  }
+  header nav {
+    padding-left: 2.5em;
+  }
+  header nav div {
+    margin-right: 10em;
+  }
+  .titolo {
+    margin-left: 2em;
+    margin-top: 5em;
+    flex: 2;
+  }
+
+  .M {
+    flex: 1;
+    min-width: 300px;
+    margin-top: 0.7em;
+  }
+
+  h1 {
+    font-size: 5em;
+  }
+  main {
+    padding-left: 2em;
+  }
+  .grigio span {
+    background-color: transparent;
+    padding: 0;
+    color: inherit;
+    border-radius: 0;
+  }
+  .contenuto .stella {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+
+  .grigio {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-grow: 1;
+    font-size: 0.9em;
+    margin: 0;
+  }
+
+  .contenuto .stella img {
+    display: none;
+  }
+  footer {
+    padding-left: 2.5em;
+    flex-direction: column-reverse;
+  }
+  .massimo {
+    max-width: 70%;
+  }
+  .btn {
+    margin-top: 0.7em;
+  }
+
+  .Flist {
+    max-width: 70%;
+    padding: 0;
+    flex-wrap: wrap;
+  }
+}
+
+/* Mobile */
+@media screen and (max-width: 480px) {
+  .M {
+    width: 100%;
+    top: 30px;
+  }
+  svg > * {
+    transform: scale(0.6);
+  }
 }
